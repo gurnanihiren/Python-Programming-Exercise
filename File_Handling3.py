@@ -18,7 +18,8 @@ print('File-Operations(Read) in Python')
 file_object=open('example.txt','r')
 #data=file_object.readline()
 
-data=file_object.readline()
+#data=file_object.readline()
+data=file_object.read(5)
 print(data)
 
 file_object.close()
@@ -33,4 +34,19 @@ file_object=open('example.txt','r')
 data=file_object.readline()
 print(data)
 file_object.close()
+
+print('Examples Showing WriteLines Function')
+file_object=open('example.txt','a')
+L=['Anand\n','Nadiad\n','Ahmedabad\n','Vadodara\n']
+L={'Gurnani\n',"Waheguru\n","Indiana\n"}
+file_object.writelines(L)
+file_object.close()
+
+file_object=open('example.txt','r')
+print(file_object.read())
+
+file_object.close()
+
+
+
 
